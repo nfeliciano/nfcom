@@ -11,5 +11,5 @@ $("#homeButton").click(function() {
     $("#mainMenu").animate({
       marginLeft: '41%'
     }, "slow");
-  };
+  }
 });

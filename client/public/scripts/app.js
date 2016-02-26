@@ -12,7 +12,7 @@ nfcom.config(function($stateProvider, $urlRouterProvider) {
       url: '/projects/:projectname',
       templateUrl: '/views/projects.detail.html',
       controller: 'projectsController'
-    })
+    });
 });
 
 nfcom.controller('mainController', ['$scope', function($scope) {

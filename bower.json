@@ -1,0 +1,25 @@
+{
+  "name": "nfcom",
+  "description": "noel's site",
+  "main": "app.js",
+  "authors": [
+    "nfeliciano <feliciano.noel@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "foundation-apps": "^1.2.0",
+    "angular-ui-router": "^0.2.18",
+    "jquery": "^2.2.1"
+  }
+}

@@ -1,6 +1,7 @@
 nfcom.controller('projectsController', ['$scope', '$stateParams', function($scope, $stateParams) {
-  var projectName = $stateParams.projectname;
+  var projectName = $stateParams.projectname;                   //get project name from the link name
 
+  //Just testing for now
   $scope.project = {};
   var projectLfiscrapbook = {
     name: 'LFI Scrapbook!',
@@ -14,7 +15,7 @@ nfcom.controller('projectsController', ['$scope', '$stateParams', function($scop
     link: 'http://www.linksupp.com'
   };
 
-  //pull information about project
+  //pull information about project depending on which project user is viewing
   if (projectName.localeCompare("lfiscrapbook") === 0) {
     $scope.project = projectLfiscrapbook;
   } else if (projectName.localeCompare("linksupp") === 0) {

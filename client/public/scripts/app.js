@@ -1,5 +1,6 @@
 var nfcom = angular.module('nfcom', ['ui.router']);
 
+//Ui-router: https://github.com/angular-ui/ui-router
 nfcom.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/home");
   $stateProvider
@@ -15,6 +16,8 @@ nfcom.config(function($stateProvider, $urlRouterProvider) {
     });
 });
 
+//IF we're using this at all, put it in a different file
+//This will likely contain list of projects, at the very least
 nfcom.controller('mainController', ['$scope', function($scope) {
 
 }]);

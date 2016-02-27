@@ -1,3 +1,5 @@
+//grunt tutorial: https://scotch.io/tutorials/a-simple-guide-to-getting-started-with-grunt
+
 module.exports = function(grunt) {
   grunt.initConfig({
     // getting config info from package.json

@@ -21,11 +21,13 @@
   </head>
   <body ng-controller="mainController">
     <div class="container">
+      <!-- view to be routed to from ui-router -->
       <div class="grid-block">
         <div class="large-1 grid-block"></div>
         <div class="content large-10 grid-block" ui-view></div>
         <div class="large-1 grid-block"></div>
       </div>
+      <!-- contains the menu -->
       <div class="grid-block">
         <div id="menu" class="column large-12 medium-12 small-12">
           <ul id="mainMenu">

@@ -1,4 +1,22 @@
-<h1>Hello</h1>
-<p>
-  {{ project.name }}
-</p>
+<div class="large-2 grid-block"></div>
+<div id="project-detail-content" class="large-8 grid-block">
+  <div class="large-6 small-12 grid-block">
+    <div class="image-cont"><img class="project-image" src="/images/lfi/1.jpg" /></div>
+    <!-- thumbnails -->
+  </div>
+
+  <div class="large-6 small-12 grid-block project-description">
+    <h3>{{ project.name }}</h3>
+    <h4>{{ project.type }}</h4>
+    <p>
+      {{ project.summary }}
+    </p>
+    <p>
+      {{ project.role }}
+    </p>
+    <ul>
+      <li ng-repeat="link in project.links"><a ng-href="{{link.link}}">{{ link.type }}</a></li>
+    </ul>
+  </div>
+</div>
+<div class="large-2 grid-block"></div>

@@ -7,13 +7,15 @@ $("#projectsButton").click(function() {
   $("#mainMenu").animate({
     marginLeft: '25%'
   }, "slow");
+  $("#projectsButton").hide();
   $("#projectsMenu").show('slow');
 });
 
 //Clicking on the home button collapses side menu(s)
 $("#homeButton").click(function() {
   if($("#projectsMenu").css('display') != 'none') {
-    $("#projectsMenu").hide('slow');
+    $("#projectsMenu").hide();
+    $("#projectsButton").show();
     $("#mainMenu").animate({
       marginLeft: '41%'
     }, "slow");

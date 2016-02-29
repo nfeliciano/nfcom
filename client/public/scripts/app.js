@@ -10,7 +10,6 @@ nfcom.config(function($stateProvider, $urlRouterProvider) {
     })
     .state('projectDetail', {
       url: "/projects/{projectname:linksupp|lfiscrapbook|comictycoon|jplc}",
-      url: '/projects/:projectname',
       templateUrl: '/views/projects.detail.html',
       controller: 'projectsController'
     });

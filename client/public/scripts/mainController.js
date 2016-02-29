@@ -11,7 +11,7 @@ nfcom.controller('mainController', ['$scope', function($scope) {
       link: 'mailto:feliciano.noel@gmail.com' },
     { icon: 'icon-profile',
       link: '/images/resume.pdf' }
-  ]
+  ];
 
   $scope.projects = [
     { icon: 'icon-tablet',
@@ -26,5 +26,5 @@ nfcom.controller('mainController', ['$scope', function($scope) {
     { icon: 'icon-tablet',
       link: 'jplc',
       name: 'Jet Pack Laser Cat' },
-  ]
+  ];
 }]);

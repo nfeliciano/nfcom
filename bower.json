@@ -21,5 +21,8 @@
     "foundation-apps": "^1.2.0",
     "angular-ui-router": "^0.2.18",
     "jquery": "^2.2.1"
+  },
+  "resolutions": {
+    "angular": "^1.5.0"
   }
 }

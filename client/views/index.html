@@ -22,6 +22,15 @@
   </head>
   <body ng-controller="mainController">
     <div class="container">
+      <div class="grid-block">
+        <div class="social-links large-6 medium-8 grid-block">
+          <ul>
+            <li ng-repeat="link in socialLinks">
+              <a ng-href="{{ link.link }}"><span class="{{ link.icon }}"></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <!-- view to be routed to from ui-router -->
       <div class="grid-block">
         <div class="large-1 grid-block"></div>
@@ -33,7 +42,7 @@
       <div class="grid-block">
         <div id="menu" class="column large-12 medium-12 small-12">
           <ul id="mainMenu">
-            <li><a ui-sref="home">
+            <li><a ui-sref-active="active" ui-sref="home">
               <button name="home" class="menu-button main-menu-button icon-home3" id="homeButton">
                 <span>Home</span>
               </button>
@@ -46,15 +55,13 @@
           </ul>
           <div id="hiddenProjects">
             <ul id="projectsMenu">
-              <li><a ui-sref="projectDetail({projectname: 'lfiscrapbook'})">
-                <button name="lfiscrapbook" class="menu-button projects-menu-button icon-mobile">
-                  <span>LFI!<br />Scrapbook</span>
-                </button></a>
+              <li ng-repeat="project in projects">
+                <a ui-sref="projectDetail({projectname:'{{ project.link }}'})" ui-sref-active="active">
+                  <button name="{{ project.link }}" class="menu-button projects-menu-button {{ project.icon }}">
+                    <span>{{ project.name }}</span>
+                  </button>
+                </a>
               </li>
-              <li><button name="linksupp" class="menu-button projects-menu-button icon-laptop"><span>Linksupp</span></button></li>
-              <li><button name="comictycoon" class="menu-button projects-menu-button icon-mobile"><span>Comic<br />Tycoon</span></button></li>
-              <li><button name="pencilfx" class="menu-button projects-menu-button icon-mobile"><span>PencilFX</span></button></li>
-              <li><button name="jplc" class="menu-button projects-menu-button icon-mobile"><span>Jet Pack<br />Laser Cat</span></button></li>
             </ul>
           </div>
         </div>
@@ -63,6 +70,7 @@
 
     <!-- load own scripts -->
     <script src="/scripts/app.js"></script>
+    <script src="/scripts/mainController.js"></script>
     <script src="/scripts/projectsController.js"></script>
     <script src="/scripts/animations.js"></script>
   </body>

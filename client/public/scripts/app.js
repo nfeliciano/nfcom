@@ -9,15 +9,9 @@ nfcom.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: '/views/profile.html'
     })
     .state('projectDetail', {
-      // url: "/projects/{projectname:linksupp|lfiscrapbook}",
+      url: "/projects/{projectname:linksupp|lfiscrapbook|comictycoon|jplc}",
       url: '/projects/:projectname',
       templateUrl: '/views/projects.detail.html',
       controller: 'projectsController'
     });
 });
-
-//IF we're using this at all, put it in a different file
-//This will likely contain list of projects, at the very least
-nfcom.controller('mainController', ['$scope', function($scope) {
-
-}]);

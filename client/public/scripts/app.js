@@ -8,9 +8,14 @@ nfcom.config(function($stateProvider, $urlRouterProvider) {
       url: '/home',
       templateUrl: '/views/profile.html'
     })
+    .state('projects', {
+      url: '/projects',
+      templateUrl: '/views/projects.html',
+      controller: 'projectsController'
+    })
     .state('projectDetail', {
       url: "/projects/{projectname:linksupp|lfiscrapbook|comictycoon|jplc}",
       templateUrl: '/views/projects.detail.html',
-      controller: 'projectsController'
+      controller: 'projectDetailsController'
     });
 });

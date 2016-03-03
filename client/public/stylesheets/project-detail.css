@@ -44,6 +44,7 @@
 
 .project-description, .project-description-vert {
   display: inline-block;
+  overflow: hidden;
 }
 
 .project-description h3, .project-description-vert h3 {
@@ -66,6 +67,7 @@
 .project-description p, .project-description-vert p {
   margin-left: 30px;
   margin-right: 30px;
+  margin-top: -10px;
 }
 
 .project-description ul, .project-description-vert ul {
@@ -98,10 +100,14 @@
 }
 
 .project-image {
-    max-width: 500px;
-    max-height: 260px;
+    max-width: 400px;
     display: block;
-    margin-left: 180px;
+}
+
+.project-image-vert {
+  max-width: 440px;
+  max-height: 300px;
+  margin-left: 180px;
 }
 
 .image-cont-vert:after {

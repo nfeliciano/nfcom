@@ -1,8 +1,8 @@
-nfcom.controller('projectsController', ['$scope', '$stateParams', function($scope, $stateParams) {
+nfcom.controller('projectDetailsController', ['$scope', '$stateParams', function($scope, $stateParams) {
   var projectName = $stateParams.projectname;                   //get project name from the link name
 
-  //Just testing for now
   $scope.project = {};
+
   var projectLfiscrapbook = {
     name: 'LFI Scrapbook!',
     type: 'iPad App',

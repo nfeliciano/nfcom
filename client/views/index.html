@@ -22,8 +22,8 @@
   </head>
   <body ng-controller="mainController">
     <div class="container">
-      <div class="grid-block">
-        <div class="social-links large-6 medium-8 grid-block">
+      <div class="group">
+        <div class="social-links grid-block align-center">
           <ul>
             <li ng-repeat="link in socialLinks">
               <a ng-href="{{ link.link }}"><span class="{{ link.icon }}"></span></a>
@@ -32,15 +32,13 @@
         </div>
       </div>
       <!-- view to be routed to from ui-router -->
-      <div class="grid-block">
-        <div class="large-1 grid-block"></div>
-        <div class="content large-10 grid-block" ui-view></div>
-        <div class="large-1 grid-block"></div>
+      <div class="group">
+        <div class="content align-center grid-block" ui-view></div>
       </div>
       <hr />
       <!-- contains the menu -->
-      <div class="grid-block">
-        <div id="menu" class="column large-12 medium-12 small-12">
+      <div class="group">
+        <div id="menu" class="align-center grid-block">
           <ul id="mainMenu">
             <li><a ui-sref-active="active" ui-sref="home">
               <button name="home" class="menu-button main-menu-button icon-home3" id="homeButton">

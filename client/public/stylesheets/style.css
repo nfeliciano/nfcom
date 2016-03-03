@@ -29,7 +29,6 @@ p {
 }
 
 .social-links {
-  text-align: center;
   margin-top: 30px;
   max-height: 38px;
   min-width: 100%;
@@ -38,7 +37,6 @@ p {
 
 .social-links ul {
   list-style: none;
-  margin: 2px auto;
 }
 
 .social-links ul li {
@@ -152,7 +150,6 @@ p {
 #mainMenu {
   position: relative;
   width: 270px;
-  margin-left: 41%;
   padding: 0;
   float: left;
   overflow: hidden;

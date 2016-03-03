@@ -12,13 +12,12 @@
 }
 
 .image-list {
-  text-align: center;
   margin-top: 10px;
   max-height: 70px;
 }
 
 .image-list ul {
-  margin-left: -80px;
+  margin-left: -10px;
 }
 
 .image-list ul li {

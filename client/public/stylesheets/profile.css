@@ -28,6 +28,8 @@
   font-family: 'CardoRegular', Arial, sans-serif;
   font-size: 18px;
   color: #787878;
+  list-style-type: circle;
+  list-style-position: inside;
 }
 
 #intro ul li {

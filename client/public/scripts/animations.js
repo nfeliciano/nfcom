@@ -5,7 +5,7 @@
 //TODO: Is it possible to not do this when on mobile?
 $("#projectsButton").click(function() {
   $("#mainMenu").animate({
-    marginLeft: '-5%'
+    marginLeft: '-2%'
   }, "slow");
   $("#projectsButton").hide();
   $("#projectsMenu").show('slow');
@@ -17,7 +17,7 @@ $("#homeButton").click(function() {
     $("#projectsMenu").hide();
     $("#projectsButton").show();
     $("#mainMenu").animate({
-      marginLeft: '0%'
+      marginLeft: '2%'
     }, "slow");
   }
 });

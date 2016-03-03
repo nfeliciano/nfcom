@@ -1,18 +1,41 @@
-<div class="large-2 grid-block"></div>
-<div id="project-detail-content" ng-if="project.sides" class="large-8 grid-block">
-  <div class="large-6 small-12 grid-block clearfix">
-    <div class="image-cont">
-      <img class="project-image" ng-src="{{ project.image }}"/>
+<div id="project-detail-content" ng-if="project.sides">
+  <div class="align-center grid-block wrap">
+    <div class="grid-content large-4 medium-4 small-12 image-cont noscroll">
+      <img class="project-image" ng-src="{{ project.image }}" />
       <div class="image-list">
         <ul>
           <li ng-repeat="icon in project.icons"><a href="" ng-click="changePicture(icon)"><img ng-src="{{ icon }}" /></a></li>
         </ul>
       </div>
     </div>
-    <!-- thumbnails-->
+    <div class="grid-content large-4 medium-4 small-12 project-description noscroll">
+      <h3>{{ project.name }}</h3>
+      <h4>{{ project.type }}</h4>
+      <p>
+        {{ project.summary }}
+      </p>
+      <p>
+        {{ project.role }}
+      </p>
+      <ul>
+        <li ng-repeat="link in project.links"><a ng-href="{{link.link}}"><span>{{ link.type }}</span></a></li>
+      </ul>
+    </div>
   </div>
+</div>
 
-  <div class="large-6 small-12 grid-block project-description">
+<div id="project-detail-content" ng-if="!project.sides">
+  <div class="align-center vertical grid-block">
+    <div class="grid-content image-cont-vert">
+      <div class="image-list-vert">
+        <ul>
+          <li ng-repeat="icon in project.icons"><a href="" ng-click="changePicture(icon)"><img ng-src="{{ icon }}" /></a></li>
+        </ul>
+      </div>
+      <img class="project-image-vert" ng-src="{{ project.image }}" />
+    </div>
+  </div>
+  <div class="grid-container project-description project-description-vert">
     <h3>{{ project.name }}</h3>
     <h4>{{ project.type }}</h4>
     <p>
@@ -25,10 +48,9 @@
       <li ng-repeat="link in project.links"><a ng-href="{{link.link}}"><span>{{ link.type }}</span></a></li>
     </ul>
   </div>
-</div>
+  </div>
 
-<div id="project-detail-content" ng-if="!project.sides" class="vertical grid-block">
-  <div class="image-cont-vert">
+  <!-- <div class="image-cont-vert">
     <div class="image-list-vert">
       <ul>
         <li ng-repeat="icon in project.icons"><a href="" ng-click="changePicture(icon)"><img ng-src="{{ icon }}" /></a></li>
@@ -48,6 +70,5 @@
     <ul>
       <li ng-repeat="link in project.links"><a ng-href="{{link.link}}"><span>{{ link.type }}</span></a></li>
     </ul>
-  </div>
+  </div> -->
 </div>
-<div class="large-2 grid-block"></div>

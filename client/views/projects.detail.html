@@ -1,8 +1,15 @@
 <div class="large-2 grid-block"></div>
 <div id="project-detail-content" ng-if="project.sides" class="large-8 grid-block">
-  <div class="large-6 small-12 grid-block">
-    <div class="image-cont"><img class="project-image" src="{{ project.image }}"/></div>
-    <!-- thumbnails -->
+  <div class="large-6 small-12 grid-block clearfix">
+    <div class="image-cont">
+      <img class="project-image" ng-src="{{ project.image }}"/>
+      <div class="image-list">
+        <ul>
+          <li ng-repeat="icon in project.icons"><a href="" ng-click="changePicture(icon)"><img ng-src="{{ icon }}" /></a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- thumbnails-->
   </div>
 
   <div class="large-6 small-12 grid-block project-description">
@@ -21,7 +28,14 @@
 </div>
 
 <div id="project-detail-content" ng-if="!project.sides" class="vertical grid-block">
-  <div class="image-cont-vert"><img class="project-image" src="{{ project.image }}"/></div>
+  <div class="image-cont-vert">
+    <div class="image-list-vert">
+      <ul>
+        <li ng-repeat="icon in project.icons"><a href="" ng-click="changePicture(icon)"><img ng-src="{{ icon }}" /></a></li>
+      </ul>
+    </div>
+    <img class="project-image" ng-src="{{ project.image }}"/>
+  </div>
   <div class="project-description-vert">
     <h3>{{ project.name }}</h3>
     <h4>{{ project.type }}</h4>

@@ -17,6 +17,12 @@ nfcom.controller('projectsController', ['$scope', '$stateParams', function($scop
         link: 'http://web.uvic.ca/~carte/lfiscrapbook.html' },
       { type: 'Youtube',
         link: 'https://www.youtube.com/watch?v=LTBKKDj43tU' }
+    ],
+    icons: [
+      '/images/lfi/1.jpg',
+      '/images/lfi/2.jpg',
+      '/images/lfi/3.jpg',
+      '/images/lfi/4.jpg'
     ]
   };
 
@@ -32,6 +38,12 @@ nfcom.controller('projectsController', ['$scope', '$stateParams', function($scop
       link: 'https://github.com/nfeliciano/mangiamo' },
     { type: 'Video Demo',
       link: 'https://www.youtube.com/watch?v=6ol6h0DApqQ' }
+    ],
+    icons: [
+      '/images/linksupp/1.png',
+      '/images/linksupp/2.png',
+      '/images/linksupp/3.png',
+      '/images/linksupp/4.png'
     ]
   };
 
@@ -49,6 +61,13 @@ nfcom.controller('projectsController', ['$scope', '$stateParams', function($scop
         link: 'https://itunes.apple.com/us/app/comic-tycoon-for-iphone/id659102616?mt=8' },
       { type: 'Video Demo',
         link: 'https://www.youtube.com/watch?v=2ih0VSGr3HU' }
+    ],
+    icons: [
+      '/images/comictycoon/1.jpg',
+      '/images/comictycoon/2.jpg',
+      '/images/comictycoon/3.jpg',
+      '/images/comictycoon/4.jpg',
+      '/images/comictycoon/5.jpg'
     ]
   };
 
@@ -62,6 +81,13 @@ nfcom.controller('projectsController', ['$scope', '$stateParams', function($scop
     links: [
       { type: 'GitHub',
         link: 'https://github.com/nfeliciano/jplc' }
+    ],
+    icons: [
+      '/images/jplc/1.jpg',
+      '/images/jplc/2.jpg',
+      '/images/jplc/3.jpg',
+      '/images/jplc/4.jpg',
+      '/images/jplc/5.jpg'
     ]
   };
 
@@ -74,5 +100,9 @@ nfcom.controller('projectsController', ['$scope', '$stateParams', function($scop
     $scope.project = projectComictycoon;
   } else if(projectName.localeCompare('jplc') === 0) {
     $scope.project = projectJplc;
+  }
+
+  $scope.changePicture = function(icon) {
+    $scope.project.image = icon;
   }
 }]);

@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <link rel="stylesheet" type="text/css" href="/css/profile.css" />
+    <link rel="stylesheet" type="text/css" href="/css/projects.css" />
     <link rel="stylesheet" type="text/css" href="/css/project-detail.css" />
 
   </head>
@@ -57,6 +58,13 @@
                 <a ui-sref="projectDetail({projectname:'{{ project.link }}'})" ui-sref-active="active">
                   <button name="{{ project.link }}" class="menu-button projects-menu-button {{ project.icon }}">
                     <span>{{ project.name }}</span>
+                  </button>
+                </a>
+              </li>
+              <li>
+                <a ui-sref="projects" ui-sref-active="active">
+                  <button name="projects" class="menu-button projects-menu-button icon-drive">
+                    <span>All Projects</span>
                   </button>
                 </a>
               </li>

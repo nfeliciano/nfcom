@@ -1,6 +1,19 @@
 <div id="projects-content">
-  <h3>Title</h3>
-  <p>
-    {{ empty }}
-  </p>
+  <div class="vertical grid-content wrap" id="projects-list">
+    <h3>Noel's Projects</h3>
+    <ul>
+      <li ng-repeat="project in projects">
+        <span class="project-name">{{ project.name }}</span> - <a ng-href="{{ project.link.link }}" class="project-link" target="_blank">{{ project.link.type }}</a> <br />
+        <span class="project-description">{{ project.description }}</span>
+      </li>
+    </ul>
+  </div>
+  <div class="vertical grid-content wrap" id="papers-list">
+    <h3>Noel's Papers</h3>
+    <ul>
+      <li ng-repeat="paper in papers">
+        <a ng-href="paper.link" class="paper-name">{{ paper.name }}</a> - <span class="paper-conference">{{ paper.conference }} - {{ paper.role }}</span>
+      </li>
+    </ul>
+  </div>
 </div>

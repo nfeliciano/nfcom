@@ -3,11 +3,11 @@
 }
 
 .image-cont {
-  margin-right: -50px;
+  margin-right: 0px;
 }
 
 .project-image {
-  max-width: 380px;
+  width: 380px;
   display: block;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .image-list ul {
-  margin-left: -10px;
+  margin-left: 0px;
 }
 
 .image-list ul li {
@@ -30,7 +30,7 @@
 }
 
 .project-description {
-  margin-left: -50px;
+  margin-left: 0px;
   margin-top: 40px;
 }
 
@@ -74,6 +74,7 @@
 }
 
 .project-description a {
+  font-family: 'MontserratBold', Arial, sans-serif;
   color: #37474f;
 }
 
@@ -87,7 +88,6 @@
 }
 
 .image-cont-vert {
-  margin-left: 150px;
 }
 
 .image-list-vert {

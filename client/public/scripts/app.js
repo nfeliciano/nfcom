@@ -2,10 +2,10 @@ var nfcom = angular.module('nfcom', ['ui.router']);
 
 //Ui-router: https://github.com/angular-ui/ui-router
 nfcom.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise("/home");
+  $urlRouterProvider.otherwise("/");
   $stateProvider
     .state('home', {
-      url: '/home',
+      url: '/',
       templateUrl: '/views/profile.html'
     })
     .state('projects', {

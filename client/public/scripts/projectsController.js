@@ -60,7 +60,7 @@ nfcom.controller('projectsController', ['$scope', function($scope) {
     },
     {
       name: 'This Website',
-      description: 'Built using AngularJS and Foundation for Apps.',
+      description: 'Built using AngularJS and Foundation for Apps. Deployed on Azure.',
       link: {
         type: 'GitHub',
         link: 'https://github.com/nfeliciano/nfcom'

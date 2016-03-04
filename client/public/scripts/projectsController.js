@@ -57,6 +57,14 @@ nfcom.controller('projectsController', ['$scope', function($scope) {
         type: 'GitHub',
         link: 'https://github.com/dpotts/Thinklandia-Hack'
       }
+    },
+    {
+      name: 'This Website',
+      description: 'Built using AngularJS and Foundation for Apps.',
+      link: {
+        type: 'GitHub',
+        link: 'https://github.com/nfeliciano/nfcom'
+      }
     }
     // { name: 'Abe Music',
     //   description: 'Hackathon iOS app which uses Echonest API to make playlists using songs with similar tempos based on location.',

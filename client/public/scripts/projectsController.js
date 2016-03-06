@@ -51,6 +51,13 @@ nfcom.controller('projectsController', ['$scope', function($scope) {
         link: 'https://www.youtube.com/watch?v=X4EzaJR6yPE'
       }
     },
+    { name: 'Agilefant Mobile',
+      description: 'A mobile interface for \'Agilefant\', an app for managing Agile projects. Developed using AngularJS and Cordova. Course project.',
+      link: {
+        type: 'Video Demo',
+        link: 'https://www.youtube.com/watch?v=XVIUWFyd0YU'
+      }
+    },
     { name: 'Kinect Greeting Cards',
       description: 'Hackathon program where users can use the Kinect to automatically add their faces to various, pre-selected images.',
       link: {
@@ -60,7 +67,7 @@ nfcom.controller('projectsController', ['$scope', function($scope) {
     },
     {
       name: 'This Website',
-      description: 'Built using AngularJS and Foundation for Apps. Deployed on Azure.',
+      description: 'Built using NodeJS, AngularJS and Foundation for Apps. Deployed on Azure.',
       link: {
         type: 'GitHub',
         link: 'https://github.com/nfeliciano/nfcom'

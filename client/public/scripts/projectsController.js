@@ -1,5 +1,4 @@
 nfcom.controller('projectsController', ['$scope', function($scope) {
-  $scope.empty = "Nothing here yet!"
 
   $scope.projects = [
     { name: 'LFI! Scrapbook',

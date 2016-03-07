@@ -104,5 +104,5 @@ nfcom.controller('projectDetailsController', ['$scope', '$stateParams', function
 
   $scope.changePicture = function(icon) {
     $scope.project.image = icon;
-  }
+  };
 }]);

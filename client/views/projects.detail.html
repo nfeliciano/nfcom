@@ -25,7 +25,7 @@
 </div>
 
 <div id="project-detail-content" ng-if="!project.sides">
-  <div class="align-center vertical grid-block">
+  <div class="align-center grid-block">
     <div class="grid-container image-cont-vert">
       <div class="image-list-vert">
         <ul>
@@ -35,40 +35,19 @@
       <img class="project-image-vert" ng-src="{{ project.image }}" />
     </div>
   </div>
-  <div class="grid-container project-description project-description-vert">
-    <h3>{{ project.name }}</h3>
-    <h4>{{ project.type }}</h4>
-    <p>
-      {{ project.summary }}
-    </p>
-    <p>
-      {{ project.role }}
-    </p>
-    <ul>
-      <li ng-repeat="link in project.links"><a ng-href="{{link.link}}"><span>{{ link.type }}</span></a></li>
-    </ul>
-  </div>
-  </div>
-
-  <!-- <div class="image-cont-vert">
-    <div class="image-list-vert">
+  <div class="align-center grid-block">
+    <div class="grid-container project-description project-description-vert">
+      <h3>{{ project.name }}</h3>
+      <h4>{{ project.type }}</h4>
+      <p>
+        {{ project.summary }}
+      </p>
+      <p>
+        {{ project.role }}
+      </p>
       <ul>
-        <li ng-repeat="icon in project.icons"><a href="" ng-click="changePicture(icon)"><img ng-src="{{ icon }}" /></a></li>
+        <li ng-repeat="link in project.links"><a ng-href="{{link.link}}"><span>{{ link.type }}</span></a></li>
       </ul>
     </div>
-    <img class="project-image project-image-vert" ng-src="{{ project.image }}"/>
   </div>
-  <div class="project-description-vert">
-    <h3>{{ project.name }}</h3>
-    <h4>{{ project.type }}</h4>
-    <p>
-      {{ project.summary }}
-    </p>
-    <p>
-      {{ project.role }}
-    </p>
-    <ul>
-      <li ng-repeat="link in project.links"><a ng-href="{{link.link}}"><span>{{ link.type }}</span></a></li>
-    </ul>
-  </div> -->
 </div>

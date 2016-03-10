@@ -63,11 +63,10 @@ nfcom.controller('projectDetailsController', ['$scope', '$stateParams', function
         link: 'https://www.youtube.com/watch?v=2ih0VSGr3HU' }
     ],
     icons: [
-      '/images/comictycoon/1.jpg',
+      '/images/comictycoon/5.jpg',
       '/images/comictycoon/2.jpg',
       '/images/comictycoon/3.jpg',
-      '/images/comictycoon/4.jpg',
-      '/images/comictycoon/5.jpg'
+      '/images/comictycoon/4.jpg'
     ]
   };
 

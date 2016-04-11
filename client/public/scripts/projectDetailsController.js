@@ -37,7 +37,9 @@ nfcom.controller('projectDetailsController', ['$scope', '$stateParams', function
     { type: 'GitHub',
       link: 'https://github.com/nfeliciano/mangiamo' },
     { type: 'Video Demo',
-      link: 'https://www.youtube.com/watch?v=6ol6h0DApqQ' }
+      link: 'https://www.youtube.com/watch?v=6ol6h0DApqQ' },
+    { type: 'Live Site (Login Broken)',
+      link: 'http://mangiamo-env.us-west-2.elasticbeanstalk.com/' }
     ],
     icons: [
       '/images/linksupp/1.png',

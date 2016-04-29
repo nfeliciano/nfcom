@@ -7,16 +7,16 @@ from django.utils.encoding import python_2_unicode_compatible
 
 class Music(models.Model):
     music_text = models.CharField(max_length=100)
-    add_date = models.DateTimeField('date added')
-    link = models.CharField(max_length=100, default="#")
+    add_date = models.DateTimeField(auto_now_add=True)
+    link = models.CharField(max_length=100, default='#')
 
     def __str__(self):
         return self.music_text
 
 class Games(models.Model):
     games_text = models.CharField(max_length=100)
-    add_date = models.DateTimeField('date added')
-    link = models.CharField(max_length=100, default="#")
+    add_date = models.DateTimeField()
+    link = models.CharField(max_length=100, default='#')
 
     def __str__(self):
         return self.games_text

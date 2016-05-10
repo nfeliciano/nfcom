@@ -1,5 +1,8 @@
 var nfcom = angular.module('nfcom', ['ui.router']);
 
+nfcom.constant('settings', angular.copy(nfcomSettings));
+nfcomSettings = undefined;
+
 //Ui-router: https://github.com/angular-ui/ui-router
 nfcom.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/");

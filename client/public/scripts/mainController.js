@@ -1,4 +1,4 @@
-nfcom.controller('mainController', ['$scope', function($scope) {
+nfcom.controller('mainController', ['$scope', '$http', 'currentlyFactory', function($scope, $http, currentlyFactory) {
 
   $scope.socialLinks = [
     { icon: 'icon-github',
@@ -27,4 +27,12 @@ nfcom.controller('mainController', ['$scope', function($scope) {
       link: 'jplc',
       name: 'Jet Pack Laser Cat' },
   ];
+
+  promise = currentlyFactory.getMusic();
+  promise.then(function(music) {
+    alert(music.music_text);
+  }, function(error) {
+    alert(error);
+  });
+
 }]);

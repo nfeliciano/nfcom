@@ -8,6 +8,9 @@ class Music(models.Model):
     review = models.CharField(max_length=255)
     rating = models.IntegerField()
 
+    class Meta:
+        ordering = ('add_date',)
+
     def __str__(self):
         return self.music_text
 
@@ -17,3 +20,9 @@ class Games(models.Model):
     link = models.CharField(max_length=100, default="#")
     review = models.CharField(max_length=255)
     rating = models.IntegerField()
+
+    class Meta:
+        ordering = ('add_date',)
+
+    def __str__(self):
+        return self.games_text

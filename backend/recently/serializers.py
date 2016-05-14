@@ -1,10 +1,15 @@
 from rest_framework import serializers
+from django.contrib.auth.models import User
 from recently.models import Music, Games
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('id', 'username')
 
 class MusicSerializer(serializers.ModelSerializer):
     primkey = serializers.IntegerField(read_only=True)
     music_text = serializers.CharField(max_length=100)
-    add_date = serializers.DateTimeField()
     link = serializers.CharField(max_length=100, default='#')
     review = serializers.CharField(max_length=255)
     rating = serializers.IntegerField()
@@ -12,7 +17,7 @@ class MusicSerializer(serializers.ModelSerializer):
     class Meta:
         model = Music
         ordering = 'add_date'
-        fields = ('primkey', 'music_text', 'add_date', 'link', 'review', 'rating')
+        fields = ('primkey', 'music_text', 'link', 'review', 'rating')
 
     def create(self, validated_data):
         return Music.objects.create(**validated_data)
@@ -26,7 +31,6 @@ class MusicSerializer(serializers.ModelSerializer):
 class GamesSerializer(serializers.ModelSerializer):
     primkey = serializers.IntegerField(read_only=True)
     games_text = serializers.CharField(max_length=100)
-    add_date = serializers.DateTimeField()
     link = serializers.CharField(max_length=100, default='#')
     review = serializers.CharField(max_length=255)
     rating = serializers.IntegerField()
@@ -34,7 +38,7 @@ class GamesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Games
         ordering = 'add_date'
-        fields = ('primkey', 'games_text', 'add_date', 'link', 'review', 'rating')
+        fields = ('primkey', 'games_text', 'link', 'review', 'rating')
 
     def create(self, validated_data):
         return Music.objects.create(**validated_data)

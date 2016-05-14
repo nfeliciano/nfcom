@@ -1,28 +1,20 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.views.decorators.csrf import csrf_exempt
-from rest_framework.renderers import JSONRenderer
-from rest_framework.parsers import JSONParser
+from django.contrib.auth.models import User
 from recently.models import Music, Games
-from recently.serializers import MusicSerializer
+from recently.serializers import UserSerializer, MusicSerializer, GamesSerializer
+from rest_framework import generics
+from rest_framework import permissions
 
-# Create your views here.
-class JSONResponse(HttpResponse):
-    def __init__(self, data, **kwargs):
-        content = JSONRenderer().render(data)
-        kwargs['content_type'] = 'application/json'
-        super(JSONResponse, self).__init__(content, **kwargs)
+class UserList(generics.ListAPIView):
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
-def music(request):
-    if request.method == 'GET':
-        music = Music.objects.all()
-        current_music = list(music[:1])
-        if (current_music):
-            serializer = MusicSerializer(current_music, many=True)
-            return JSONResponse(serializer.data)
+class MusicList(generics.ListCreateAPIView):
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    queryset = Music.objects.all()
+    serializer_class = MusicSerializer
 
-def games(request):
-    if request.method == 'GET':
-        games = Games.objects.all()
-        serializer = GamesSerializer(games, many=True)
-        return JSONResponse(serializer.data)
+class GamesList(generics.ListCreateAPIView):
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    queryset = Games.objects.all()
+    serializer_class = GamesSerializer
